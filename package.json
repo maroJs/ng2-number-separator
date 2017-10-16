@@ -2,7 +2,7 @@
   "name": "ng2-number-separator",
   "version": "0.1.0",
   "scripts": {
-    "build": "gulp build",
+    "build": "npm run lint && gulp build",
     "build:watch": "gulp",
     "docs": "npm run docs:build",
     "docs:build": "compodoc -p tsconfig.json -n ng2-number-separator -d docs --hideGenerator",
@@ -23,7 +23,9 @@
     "email": "marwen.b.garfa@gmail.com"
   },
   "keywords": [
-    "angular"
+    "angular 2",
+    "angular 4",
+    "html"
   ],
   "license": "MIT",
   "bugs": {
@@ -34,6 +36,7 @@
     "@angular/compiler": "^4.0.0",
     "@angular/compiler-cli": "^4.0.0",
     "@angular/core": "^4.0.0",
+    "@angular/forms": "^4.0.0",
     "@angular/platform-browser": "^4.0.0",
     "@angular/platform-browser-dynamic": "^4.0.0",
     "@compodoc/compodoc": "^1.0.0-beta.10",

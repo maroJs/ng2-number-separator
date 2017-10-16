@@ -1,4 +1,5 @@
 # ng2-number-separator
+Angular 2 directive to add number separator for html input  (eg: 30 000) with all native validators of number input (min,max,length)
 
 ## Installation
 
@@ -8,24 +9,16 @@ To install this library, run:
 $ npm install ng2-number-separator --save
 ```
 
-## Consuming your library
-
-Once you have published your library to npm, you can import your library in any Angular application by running:
-
-```bash
-$ npm install ng2-number-separator
-```
-
-and then from your Angular `AppModule`:
-
+## Integration
+Add the module to your Angular `AppModule`:
 ```typescript
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 
-// Import your library
-import { SampleModule } from 'ng2-number-separator';
+// Import the module
+import { Ng2NumberSeparatorModule } from 'ng2-number-separator';
 
 @NgModule({
   declarations: [
@@ -34,8 +27,8 @@ import { SampleModule } from 'ng2-number-separator';
   imports: [
     BrowserModule,
 
-    // Specify your library as an import
-    LibraryModule
+    // Specify the module as import
+    Ng2NumberSeparatorModule
   ],
   providers: [],
   bootstrap: [AppComponent]
@@ -43,30 +36,40 @@ import { SampleModule } from 'ng2-number-separator';
 export class AppModule { }
 ```
 
-Once your library is imported, you can use its components, directives and pipes in your Angular application:
-
+Use the directive in `input` tag with `type="text"`
 ```xml
-<!-- You can now use your library component in app.component.html -->
-<h1>
-  {{title}}
-</h1>
-<sampleComponent></sampleComponent>
+<!-- You can now use the directive numberSeparator in app.component.html -->
+<!-- separator, max, min, length are the attributes from app.component.ts -->
+    <input type="text" [numberSeparator]="separator" [(ngModel)]="title" name="title" [numberMax]="max" [numberMin]="min" [numberLength] ="length" formControlName="title" required>
 ```
 
-## Development
+## Parameters
+The directive parameter is required to activate:
+`numberSeparator`(Required): the directive attribute contain the separator.
+The directive have 3 optional params:
+`numberMin`(Optional): input min validation.
+`numberMax`(Optional): input max validation .
+`numberLength`(Optional): input Length validation.
 
-To generate all `*.js`, `*.d.ts` and `*.metadata.json` files:
 
+## Demo
+
+you can test the directive by running the demo project in localhost.
+install angular cli global:
 ```bash
-$ npm run build
+npm install -g @angular/cli
 ```
-
-To lint all `*.ts` files:
-
+install the demo node modules
 ```bash
-$ npm run lint
+npm install
 ```
 
+run the demo project:
+```bash
+npm start
+```
+
+Go to http://localhost:4200/
 ## License
 
 MIT © [Marouane ben guerfa](mailto:marwen.b.garfa@gmail.com)
