@@ -1,0 +1,50 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to Number Separator Directive
+  </h1>
+  <img width="300" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+</div>
+<div *ngIf="!showForm">
+  <h2>Here are input example with numberSeparator Directive </h2>
+  <h3>Let's configure our directive</h3>
+  <div>
+    <h4>Input length:</h4>
+    <input [(ngModel)]="length" name="length" type="number">
+    <h4>Min value:</h4>
+    <input [(ngModel)]="min" name="min" type="number">
+    <h4>Max value:</h4>
+    <input [(ngModel)]="max" name="max" type="number">
+    <h4>Separator:(default=space)</h4>
+    <input [(ngModel)]="separator" name="separator" type="text">
+  </div>
+  <div style="margin-top:1rem">
+    <button type="button" (click)="validate()">go to example</button>
+  </div>
+
+</div>
+
+<div *ngIf="showForm">
+  <h3> Example form input with validation using numberSeparator directive</h3>
+  <h4> Config Parameters:</h4>
+  <div>Length= {{length}}</div>
+  <div>Min= {{min}}</div>
+  <div>Max= {{max}}</div>
+  <div>Separator= {{!separator || separator===' ' ? 'space' : separator}}</div>
+
+  <h4>Test</h4>
+  <form [formGroup]="loginForm" novalidate (ngSubmit)="validate()">
+    <input type="text" [numberSeparator]="separator" [(ngModel)]="title" name="title" [numberMax]="max" [numberMin]="min" [numberLength] ="length" formControlName="title" required>
+    <h4 *ngIf="loginForm.valid" style="color: green">
+      Form is Valid
+    </h4>
+    <h4 *ngIf="!loginForm.valid" style="color: red">
+      Form is Invalid
+    </h4>
+  </form>
+
+  <button type="button" (click)="reset()">Reset</button>
+</div>
+
+
+

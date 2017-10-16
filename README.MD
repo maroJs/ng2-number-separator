@@ -59,6 +59,10 @@ install angular cli global:
 ```bash
 npm install -g @angular/cli
 ```
+go to demoApp
+```bash
+cd demoApp
+```
 install the demo node modules
 ```bash
 npm install

@@ -8,7 +8,7 @@ docs/*
 # *.map
 # *.d.ts
 
-demo
+demoApp
 
 # JetBrains
 .idea
