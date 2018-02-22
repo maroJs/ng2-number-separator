@@ -10,7 +10,12 @@
     "email": "marwen.b.garfa@gmail.com"
   },
   "keywords": [
-    "angular"
+    "angular",
+    "html",
+    "number",
+    "separator",
+    "thousand",
+    "ng2"
   ],
   "license": "MIT",
   "bugs": {

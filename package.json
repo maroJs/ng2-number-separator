@@ -25,7 +25,10 @@
   "keywords": [
     "angular 2",
     "angular 4",
-    "html"
+    "html",
+    "separator",
+    "thousand",
+    "number"
   ],
   "license": "MIT",
   "bugs": {
