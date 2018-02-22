@@ -23,12 +23,15 @@
     "email": "marwen.b.garfa@gmail.com"
   },
   "keywords": [
-    "angular 2",
-    "angular 4",
-    "html",
-    "separator",
-    "thousand",
-    "number"
+    "angular",
+    "directive",
+    "number",
+    "format",
+    "comma",
+    "dot",
+    "number separator",
+    "thousand separator",
+    "decimal separator"
   ],
   "license": "MIT",
   "bugs": {
