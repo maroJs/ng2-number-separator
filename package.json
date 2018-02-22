@@ -1,6 +1,6 @@
 {
   "name": "ng2-number-separator",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "scripts": {
     "build": "npm run lint && gulp build",
     "build:watch": "gulp",
