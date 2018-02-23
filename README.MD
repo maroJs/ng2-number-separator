@@ -1,7 +1,7 @@
 # ng2-number-separator
 Angular 2 directive to add number separator thousand for html input  (eg: 30 000) with all native validators of number input (min,max,length)
 
-![alt text](helper.gif)
+![alt text](https://raw.githubusercontent.com/maroJs/ng2-number-separator/master/helper.gif)
 
 ## Installation
 
