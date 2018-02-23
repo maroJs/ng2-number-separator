@@ -11,11 +11,14 @@
   },
   "keywords": [
     "angular",
-    "html",
+    "directive",
     "number",
-    "separator",
-    "thousand",
-    "ng2"
+    "format",
+    "comma",
+    "dot",
+    "number separator",
+    "thousand separator",
+    "decimal separator"
   ],
   "license": "MIT",
   "bugs": {
